@@ -1,0 +1,4 @@
+flask
+Flask-SQLAlchemy==3.0.0
+sqlalchemy==1.4.32
+flasgger

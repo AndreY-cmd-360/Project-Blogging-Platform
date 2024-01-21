@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    <title>Online platform</title>
+</head>
+<body>
+    <table class="posts">
+        {% for post in posts %}
+            <tr>
+                <td class="acc_name">{{post.account_name}}</td>
+            </tr>
+            <tr>
+                <td class="post_content">{{post.content}}</td>
+            </tr>
+            <tr>
+                    <td class="delete_post">
+                        <form action="/delete_post/{{post.id}}">
+                            <input type="submit" value="Delete Post">
+                        </form>
+                    </td>
+            </tr>
+            <tr>
+                <td><hr></td>
+            </tr>
+        {% endfor %}
+    </table>
+    <form action="/create_post" method="POST" class="new_post">
+        <input type="text" name="post_content">
+        <input type="submit">
+    </form>
+</body>
+</html>

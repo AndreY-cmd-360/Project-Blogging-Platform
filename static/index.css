@@ -1,0 +1,28 @@
+body {
+    text-align: center;
+}
+
+.posts {
+    border: solid black 3px;
+    margin: auto;
+    width: 80%;
+}
+
+.acc_name {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.post_content {
+    font-size: 18px;
+}
+
+.new_post {
+    margin: 20px auto auto;
+    width: 50%;
+}
+
+.delete_post {
+    float: right;
+    margin: 0 10px;
+}
